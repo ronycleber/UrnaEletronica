@@ -47,7 +47,8 @@ function atualizaInterface(){
         console.log(candidato.fotos);
         let fotoHTML = '';
         candidato.fotos.forEach(foto => {
-            fotoHTML = `<div class="d-1-image"><img src="images/${foto.url}" alt="">                        
+            let smallClass = foto.small ? 'small' : '';
+            fotoHTML += `<div class="d-1-image ${smallClass}"><img src="images/${foto.url}" alt="">                        
             ${foto.legenda}    
             </div>`;
         });
@@ -116,7 +117,7 @@ function confirma(){
                 numeros.innerHTML = '';
                 lateral.innerHTML = '';                              
                 document.location.reload(true);
-            }, '7000')
+            }, '37000')
         }
     }
 }
